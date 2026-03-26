@@ -161,7 +161,7 @@ pub enum Status {
 
 ## 🌐 Contract Details
 
-- **Contract ID**: `REPLACE_WITH_YOUR_CONTRACT_ID_AFTER_DEPLOYMENT`
+- **Contract ID**: `CDUENL2REY52DWXMMPEKTXFMZ7UQWFRP7KZE5PMFQ6RMHPTCHJIEZ6TF`
 - **Network**: Stellar Testnet
 - **Blockchain**: Stellar
 - **SDK**: Soroban v25
