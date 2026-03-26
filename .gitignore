@@ -5,6 +5,6 @@ target
 .soroban
 .stellar
 /*.md
-/README.md
+!/README.md
 /*.pdf
 .github
