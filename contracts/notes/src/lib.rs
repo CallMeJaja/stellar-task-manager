@@ -80,7 +80,7 @@ impl TaskManagerContract {
             .unwrap_or(Vec::new(&env));
 
         let new_task = Task {
-            id: env.ledger().sequence(),
+            id: env.ledger().sequence() as u64,
             title,
             description,
             priority,

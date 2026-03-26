@@ -6,7 +6,7 @@ use soroban_sdk::{testutils::Ledger, Env, String};
 #[test]
 fn test_create_task() {
     let env = Env::default();
-    let contract_id = env.register_contract(None, TaskManagerContract);
+    let contract_id = env.register(TaskManagerContract, ());
     let client = TaskManagerContractClient::new(&env, &contract_id);
 
     let title = String::from_str(&env, "Complete Stellar Workshop");
@@ -27,7 +27,7 @@ fn test_create_task() {
 #[test]
 fn test_get_tasks_by_status() {
     let env = Env::default();
-    let contract_id = env.register_contract(None, TaskManagerContract);
+    let contract_id = env.register(TaskManagerContract, ());
     let client = TaskManagerContractClient::new(&env, &contract_id);
 
     // Create multiple tasks
@@ -63,7 +63,7 @@ fn test_get_tasks_by_status() {
 #[test]
 fn test_update_task_status() {
     let env = Env::default();
-    let contract_id = env.register_contract(None, TaskManagerContract);
+    let contract_id = env.register(TaskManagerContract, ());
     let client = TaskManagerContractClient::new(&env, &contract_id);
 
     client.create_task(
@@ -87,7 +87,7 @@ fn test_update_task_status() {
 #[test]
 fn test_delete_task() {
     let env = Env::default();
-    let contract_id = env.register_contract(None, TaskManagerContract);
+    let contract_id = env.register(TaskManagerContract, ());
     let client = TaskManagerContractClient::new(&env, &contract_id);
 
     client.create_task(
@@ -111,7 +111,7 @@ fn test_delete_task() {
 #[test]
 fn test_delete_nonexistent_task() {
     let env = Env::default();
-    let contract_id = env.register_contract(None, TaskManagerContract);
+    let contract_id = env.register(TaskManagerContract, ());
     let client = TaskManagerContractClient::new(&env, &contract_id);
 
     let result = client.delete_task(&999999u64);
